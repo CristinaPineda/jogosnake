@@ -32,7 +32,7 @@ def local_grid():
 
 #função que define o encontro com a comidinha
 def encontro(x1, x2):
-    return (x1[0] == x2[0]) and (x1[1] == x2[1]) # verifica se os parametros da cobrinha e da comidinha se encontraram
+	return (x1[0] == x2[0]) and (x1[1] == x2[1]) # verifica se os parametros da cobrinha e da comidinha se encontraram
 
 #cada vez que a cobrinha comer ela muda de cor! (ahh é fofinho vai! :) 
 def mudar_cor():
@@ -45,15 +45,23 @@ def perdeu():
 	frase = random.choice(frases) # escolhe uma frase
 	tela.fill((54,54,54)) # renderiza uma tela na cor escolhida
 	terminou = fonte.render(frase, True, VERMELHO) # diz como vai ser a frase de fim de jogo
-	tela.blit(terminou, [150, 300]) #escreve a frase escolhida de fim de jogo na posição escolhida dentro da tela
+	perdeu = pygame.mixer.Sound("music/som_perdeu.wav")
+	pygame.mixer.music.pause() # pausa a música de fundo que inicializou na linha 64
+	perdeu.play() # executa a música de game over
+	tela.blit(terminou, [180, 300]) #escreve a frase escolhida de fim de jogo na posição escolhida dentro da tela
 	pygame.display.update() #atualiza a tela 
 	pygame.time.wait(5000) #tempo para a saída depois do game over
 
 pygame.init() #inicia o pygame
+pygame.mixer.init() # inicia o módulo de reprodução de sons do pygame
 tela = pygame.display.set_mode((600,600)) #tamanho que a tela de jogo irá ter
 pygame.display.set_caption("Jogo da cobrinha") # coloca um nome no jogo que aparecerá na aba
 fonte = pygame.font.SysFont(None,55) # variavel de uso de fontes 
 fonte2 = pygame.font.SysFont(None, 25) #variavel de uso de fontes
+
+#som de fundo do jogo
+pygame.mixer.music.load("music/som_fundo.wav") # mixer é o módulo do pygame para musica, music pq é o que eu vou carregar e load para carregar, dentro do paranteses indico o caminho do arquivo de música
+pygame.mixer.music.play(-1) # usamos o play para executar a música e  o -1 para indicar que a música é para ficar tocando sempre
 
 pontos = 0 #pontuação inicial
 placar = fonte2.render("Pontos: "+ str(pontos), True, AMARELO) # variavel que diz como será escrito o placar
@@ -92,7 +100,9 @@ while not game_over: # enquanto o jogo estiver "valendo" todos os comandos abaix
 
 # vamos definir a dinamica do jogo!! 
 	if encontro(cobra[0], alvo_posicao): # se a cobrinha (cabeça da cobrinha) encontrar a comida  
-		alvo_posicao = local_grid() # a comidinha vai pra outro lugar 
+		alvo_posicao = local_grid() # a comidinha vai pra outro lugar
+		comida = pygame.mixer.Sound("music/som_alimento.wav") # busca e carrega o som da comidinha
+		comida.play() #executa o som da comidinha
 		mudar_cor() # a cobrinha muda de cor
 		cobra.append((0,0)) # a cobrinha cresce
 
