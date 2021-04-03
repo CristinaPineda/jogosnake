@@ -24,10 +24,12 @@ CORES = [AMARELO,BRANCO,VERDE,VERDE2,VERMELHO,VERMELHO2,CHOCOLATE,FUSCIA,INDIGO,
 
 direcao = ESQUERDA
 
+global cor_new
+
 #função que define o campo de inserção da comidinha da cobra 
 def local_grid():
-	x= random.randint(5,590) #posiciona aleatóriamente a comidinha nos parametros do eixo x e y
-	y= random.randint(20,590)
+	x= random.randint(15,580) #posiciona aleatóriamente a comidinha nos parametros do eixo x e y
+	y= random.randint(25,580)
 	return (x//10 * 10, y//10 * 10) # retorna a comidinha alinhada com a cobrinha
 
 #função que define o encontro com a comidinha
@@ -36,8 +38,11 @@ def encontro(x1, x2):
 
 #cada vez que a cobrinha comer ela muda de cor! (ahh é fofinho vai! :) 
 def mudar_cor():
-	cor = random.choice(CORES) #escolhe uma cor dentro das cores disponiveis
-	cobra_tam.fill(cor) #transforma a cobrinha na cor escolhida
+	cor1 = random.choice(CORES)
+	cor2 = random.choice(CORES)
+	cobra_tam.fill(cor1)
+	alvo.fill(cor2)
+
 
 #função que define a tela de game over
 def perdeu():
@@ -69,6 +74,7 @@ placar = fonte2.render("Pontos: "+ str(pontos), True, AMARELO) # variavel que di
 fase = 0 # fase inicial
 level = fonte2.render("Fase: " + str(fase), True, AZUL) # variavel que diz como será escrito a fase
 
+global cobra
 cobra = [(200,200),(210,200),(220,200)] # desenha a cobrinha inicial
 cobra_tam = pygame.Surface((10,10)) # variável que diz o quanto a cobra ira crescer
 cobra_tam.fill(BRANCO) # desenha a cobra e dá a cor inicial
@@ -103,7 +109,7 @@ while not game_over: # enquanto o jogo estiver "valendo" todos os comandos abaix
 		alvo_posicao = local_grid() # a comidinha vai pra outro lugar
 		comida = pygame.mixer.Sound("music/som_alimento.wav") # busca e carrega o som da comidinha
 		comida.play() #executa o som da comidinha
-		mudar_cor() # a cobrinha muda de cor
+		mudar_cor()  # a cobrinha muda de cor
 		cobra.append((0,0)) # a cobrinha cresce
 
 		pontos = pontos + 10 # cada vez que a cobrinha se alimentar a pontuação aumenta! ebaaa! 
@@ -114,8 +120,7 @@ while not game_over: # enquanto o jogo estiver "valendo" todos os comandos abaix
 			level = fonte2.render("Fase: " + str(fase), True, AZUL) # atualiza a fase escrita na tela
 			velocidade_cobra = velocidade_cobra + 3 # aumenta a velocidade da cobrinha 
 			velocidade.tick(velocidade_cobra) # conforme a fase muda a velocidade aumenta, afinal de contas tem que ir ficando mais dificil né!
-
-	
+		
 # se a cobrinha "bater" nas bordas do jogo ele acaba 
 	if cobra[0][0] >= 599 or cobra[0][1] >= 599 or cobra[0][0] < 0 or cobra[0][1] < 0: # aqui são definidos os limites dos quatro lados do jogo de acordo com os seus eixos 
 		game_over = True # já era né, não tá valendo mais
