@@ -24,8 +24,6 @@ CORES = [AMARELO,BRANCO,VERDE,VERDE2,VERMELHO,VERMELHO2,CHOCOLATE,FUSCIA,INDIGO,
 
 direcao = ESQUERDA
 
-global cor_new
-
 #função que define o campo de inserção da comidinha da cobra 
 def local_grid():
 	x= random.randint(15,580) #posiciona aleatóriamente a comidinha nos parametros do eixo x e y
@@ -38,11 +36,10 @@ def encontro(x1, x2):
 
 #cada vez que a cobrinha comer ela muda de cor! (ahh é fofinho vai! :) 
 def mudar_cor():
-	cor1 = random.choice(CORES)
-	cor2 = random.choice(CORES)
-	cobra_tam.fill(cor1)
-	alvo.fill(cor2)
-
+	cor1 = random.choice(CORES) # escolhe cores na lista de CORES
+	cor2 = random.choice(CORES) # escolhe cores na lista de CORES
+	cobra_tam.fill(cor1) #atribui a cor escolhida para a cobrinha
+	alvo.fill(cor2) #atribui a cor escolhida para a comidinha
 
 #função que define a tela de game over
 def perdeu():
@@ -74,7 +71,6 @@ placar = fonte2.render("Pontos: "+ str(pontos), True, AMARELO) # variavel que di
 fase = 0 # fase inicial
 level = fonte2.render("Fase: " + str(fase), True, AZUL) # variavel que diz como será escrito a fase
 
-global cobra
 cobra = [(200,200),(210,200),(220,200)] # desenha a cobrinha inicial
 cobra_tam = pygame.Surface((10,10)) # variável que diz o quanto a cobra ira crescer
 cobra_tam.fill(BRANCO) # desenha a cobra e dá a cor inicial
