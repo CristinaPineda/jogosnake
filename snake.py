@@ -47,10 +47,12 @@ def perdeu():
 	frase = random.choice(frases) # escolhe uma frase
 	tela.fill((54,54,54)) # renderiza uma tela na cor escolhida
 	terminou = fonte.render(frase, True, VERMELHO) # diz como vai ser a frase de fim de jogo
+	placar = fonte.render("Pontuação final: "+ str(pontos), True, VERDE)
 	perdeu = pygame.mixer.Sound("music/som_perdeu.wav")
 	pygame.mixer.music.pause() # pausa a música de fundo que inicializou na linha 64
 	perdeu.play() # executa a música de game over
 	tela.blit(terminou, [180, 300]) #escreve a frase escolhida de fim de jogo na posição escolhida dentro da tela
+	tela.blit(placar, [130, 350])
 	pygame.display.update() #atualiza a tela 
 	pygame.time.wait(5000) #tempo para a saída depois do game over
 
