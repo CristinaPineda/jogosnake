@@ -1,0 +1,2 @@
+bsdgames==0.0.7
+pygame==2.5.0
