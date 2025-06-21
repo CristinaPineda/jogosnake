@@ -1,4 +1,7 @@
 ---
+layout: default # Isso diz ao Jekyll para usar o layout default.html
+title: Jogo da Cobrinha # Este será o título da sua página web
+---
 
 # 🐍 Jogo da Cobrinha: A Aventura Python! 🍎
 
