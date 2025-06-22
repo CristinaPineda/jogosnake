@@ -1,4 +1,4 @@
----
+<div style="text-align: center;">
 
 # 🐍 Jogo da Cobrinha: A Aventura Python! 🍎
 
@@ -103,3 +103,5 @@ A jornada de um programador é cheia de descobertas e desafios. Muitas vezes, a 
 ---
 
 **Pronto(a) para começar sua aventura na cobrinha?** Divirta-se jogando e explorando o código!
+
+</div>
