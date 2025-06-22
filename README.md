@@ -45,48 +45,38 @@ Quer jogar agora mesmo e até mesmo contribuir? Siga estas instruções!
 1. **🍴 Faça o Fork do Projeto:**
     Vá até o repositório original no GitHub e clique no botão **"Fork"**. Isso criará uma cópia do jogo em seu próprio perfil. 😉
 
-2.**⬇️ Clone para Seu Ambiente Local:**
+2. **⬇️ Clone para Seu Ambiente Local:**
     Agora, traga o projeto "forkado" para sua máquina:
-    *Crie uma pasta para o jogo no seu computador ou use uma já existente.
-    *Abra o **terminal** (ou prompt de comando) dentro dessa pasta.
-    *Use o comando para clonar o repositório:
-
+    * Crie uma pasta para o jogo no seu computador ou use uma já existente.
+    * Abra o **terminal** (ou prompt de comando) dentro dessa pasta.
+    * Use o comando para clonar o repositório:
         ```bash
         git clone <coloque_o_caminho_do_clone_copiado_do_seu_repositorio_forkado>
         ```
-
     * Entre no diretório do projeto:
-
         ```bash
         cd jogosnake
         ```
-
     * Ative o ambiente virtual para o projeto:
         * **Linux/macOS:**
-
             ```bash
             source venv/bin/activate
             ```
-
         * **Windows:**
-
             ```bash
             venv\Scripts\activate
             ```
-
     * Instale as dependências necessárias:
-
         ```bash
         pip install -r requirements.txt
         ```
-
     * **Prontinho!** Agora é só rodar o jogo:
-
         ```bash
         python main.py
         ```
-    
-    *Surgiu alguma dúvida sobre como fazer o fork e o clone?* Aqui tem um artigo super útil que explica direitinho:
+
+    *Surgiu alguma dúvida sobre como fazer o fork e o clone?*
+    Aqui tem um artigo super útil que explica direitinho:
     [Tutorial Git Fork: Como Colaborar com Projetos de Código Aberto](https://dev.to/womakerscode/tutorial-git-fork-como-colaborar-com-projetos-de-codigo-aberto-1lkm)
 
 ---
