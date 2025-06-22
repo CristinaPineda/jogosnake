@@ -2,7 +2,7 @@
 # 🐍 Jogo da Cobrinha: A Aventura Python! 🍎
 
 
-    Bem-vindo(a) ao clássico Jogo da Cobrinha, desenvolvido com **PYGAME**! Prepare-se para guiar nossa serpente faminta em uma jornada cheia de desafios e maçãs suculentas.
+Bem-vindo(a) ao clássico Jogo da Cobrinha, desenvolvido com **PYGAME**! Prepare-se para guiar nossa serpente faminta em uma jornada cheia de desafios e maçãs suculentas.
 
 ---
 
