@@ -1,32 +1,33 @@
-<div style="text-align: center;">
-
+---
 # 🐍 Jogo da Cobrinha: A Aventura Python! 🍎
 
-Bem-vindo(a) ao clássico Jogo da Cobrinha, desenvolvido com **PYGAME**! Prepare-se para guiar nossa serpente faminta em uma jornada cheia de desafios e maçãs suculentas.
+
+    Bem-vindo(a) ao clássico Jogo da Cobrinha, desenvolvido com **PYGAME**! Prepare-se para guiar nossa serpente faminta em uma jornada cheia de desafios e maçãs suculentas.
 
 ---
 
-## 🎮 Como Jogar?
+# 🎮 Como Jogar?
 
 Sua missão é simples, mas requer agilidade! Siga estes passos para dominar a cobrinha:
 
-1.  **🕹️ Controle a Cobra:**
+1.**🕹️ Controle a Cobra:**
     Use as **teclas de direção** do seu teclado (⬆️, ⬇️, ⬅️, ➡️) para movimentar a cobrinha pela tela.
-    
-    2.  **🍎 Encontre o Tesouro:**
-    O objetivo é levar a cobrinha até a **maçã vermelha** que aparece. Cada maçã devorada te dá pontos!
-    
-    3.  **➕ Ganhe Pontos:**
-    A cada maçã conquistada, você ganha **10 pontos**! Tente fazer a maior pontuação possível.
-    
-    4.  **🚀 Acelere!:**
-    A cada **50 pontos** acumulados, a cobrinha fica mais rápida, e o desafio aumenta! Prepare-se para reflexos apurados.
-    
-    5.  **⚠️ Cuidado! Fim da Aventura:**
-    A partida termina se a cobrinha:
-    * **Colidir com as bordas:** Ultrapassar os limites da tela.
+
+2.**🍎 Encontre o Tesouro:**
+O objetivo é levar a cobrinha até a **maçã vermelha** que aparece. Cada maçã devorada te dá pontos!
+
+3.**➕ Ganhe Pontos:**
+A cada maçã conquistada, você ganha **10 pontos**! Tente fazer a maior pontuação possível.
+
+4.**🚀 Acelere!:**
+A cada **50 pontos** acumulados, a cobrinha fica mais rápida, e o desafio aumenta! Prepare-se para reflexos apurados.
+
+5.**⚠️ Cuidado! Fim da Aventura:**
+A partida termina se a cobrinha:
+    ***Colidir com as bordas:** Ultrapassar os limites da tela.
         * **Se morder:** Colidir com o próprio corpo.
-        ---
+
+---
 
 ## 📊 Seu Progresso
 
@@ -41,35 +42,46 @@ Fique de olho na sua performance durante o jogo:
 
 Quer jogar agora mesmo e até mesmo contribuir? Siga estas instruções!
 
-1.  **🍴 Faça o Fork do Projeto:**
+1. **🍴 Faça o Fork do Projeto:**
     Vá até o repositório original no GitHub e clique no botão **"Fork"**. Isso criará uma cópia do jogo em seu próprio perfil. 😉
-    
-    2.  **⬇️ Clone para Seu Ambiente Local:**
+
+2.**⬇️ Clone para Seu Ambiente Local:**
     Agora, traga o projeto "forkado" para sua máquina:
-    * Crie uma pasta para o jogo no seu computador ou use uma já existente.
-    * Abra o **terminal** (ou prompt de comando) dentro dessa pasta.
-    * Use o comando para clonar o repositório:
+    *Crie uma pasta para o jogo no seu computador ou use uma já existente.
+    *Abra o **terminal** (ou prompt de comando) dentro dessa pasta.
+    *Use o comando para clonar o repositório:
+
         ```bash
         git clone <coloque_o_caminho_do_clone_copiado_do_seu_repositorio_forkado>
         ```
+
     * Entre no diretório do projeto:
+
         ```bash
         cd jogosnake
         ```
+
     * Ative o ambiente virtual para o projeto:
         * **Linux/macOS:**
+
             ```bash
             source venv/bin/activate
             ```
+
         * **Windows:**
+
             ```bash
             venv\Scripts\activate
             ```
+
     * Instale as dependências necessárias:
+
         ```bash
         pip install -r requirements.txt
         ```
+
     * **Prontinho!** Agora é só rodar o jogo:
+
         ```bash
         python main.py
         ```
@@ -103,6 +115,3 @@ A jornada de um programador é cheia de descobertas e desafios. Muitas vezes, a 
 ---
 
 **Pronto(a) para começar sua aventura na cobrinha?** Divirta-se jogando e explorando o código!
-
-</div>
-
